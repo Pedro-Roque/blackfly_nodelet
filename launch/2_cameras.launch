@@ -4,11 +4,11 @@
 
   <node pkg="nodelet" type="nodelet" name="blackfly_nodelet" args="load blackfly/blackfly_nodelet nodelet_manager" output="screen">
     <!-- Serial Numbers of Cameras -->
-    <rosparam param="camera_serial_nums">["22047471","22047464"]</rosparam>
+    <rosparam param="camera_serial_nums">["19516894","19516905"]</rosparam>
     <!-- Names of Cameras (used for topic names, etc) -->
     <rosparam param="camera_names">["cam1", "cam2"]</rosparam>
     <!-- Paths to Camera info files -->
-    <rosparam param="camera_info_paths">["package://blackfly/camera_info/cam_1.info"," "]</rosparam>
+    <rosparam param="camera_info_paths">["package://blackfly/camera_info/cam_1.info","package://blackfly/camera_info/cam_1.info"]</rosparam>
 
     <!-- Publish Mono Images Flag : True = Mono8, False = BGR8 -->
     <rosparam param="mono_flags">[true, true]</rosparam>
@@ -18,7 +18,7 @@
     when exposure begins for the image  -->
     <rosparam param="trigger_delays">[13.0, 5000.0]</rosparam>
     <!-- Frame Rate if not triggered-->
-    <rosparam param="fps">[20.0, 20.0]</rosparam>
+    <rosparam param="fps">[30.0, 30.0]</rosparam>
 
     <!-- Use Auto Exposure flag -->
     <rosparam param="is_auto_exp_flags">[true, true]</rosparam>
@@ -29,7 +29,7 @@
     <rosparam param="fixed_exp">        [20000.0, 20000.0]</rosparam>
 
     <!-- Use Auto Gain Flag -->
-    <rosparam param="auto_gains">       [true, true]</rosparam>
+    <rosparam param="auto_gains">       [false, false]</rosparam>
     <!-- Gain Bounds if using Auto Gain -->
     <rosparam param="max_gains">        [2.0, 2.0]</rosparam>
     <rosparam param="min_gains">        [0.5, 0.5]</rosparam>
